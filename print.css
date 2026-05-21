@@ -1,0 +1,34 @@
+@media print {
+  * { box-shadow: none !important; }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 12pt;
+    overflow: visible;
+    height: auto;
+  }
+
+  .no-print,
+  .print-btn,
+  .back-link,
+  .lang-toggle,
+  #qr-top { display: none !important; }
+
+  .resources-page { max-width: 100%; padding: 0; }
+
+  h1 { font-size: 22pt; margin-bottom: 6pt; page-break-after: avoid; }
+  h2 { font-size: 16pt; margin-top: 18pt; margin-bottom: 4pt; page-break-after: avoid; }
+  h3 { font-size: 13pt; page-break-after: avoid; }
+
+  .resource-section { page-break-inside: avoid; margin-bottom: 24pt; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 10pt; }
+  th, td { border: 1px solid #999; padding: 5pt 7pt; }
+  th { background: #f5e8e8 !important; }
+
+  .org-card { border: 1px solid #999; padding: 8pt; margin-bottom: 8pt; page-break-inside: avoid; }
+
+  a[href]:after { content: " (" attr(href) ")"; font-size: 8pt; color: #555; }
+  a[href^="tel:"]:after, a[href^="mailto:"]:after { content: ""; }
+}
