@@ -1163,6 +1163,36 @@ a:focus-visible {
   .zh-cell { font-size: 16px; }
 }
 
+/* ─── Inline SVG visual: viz-vs (saying-no comparison) ──── */
+.viz {
+  margin: 16px 0 12px;
+}
+.viz-vs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+.viz-vs .vs-col {
+  padding: 14px 16px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.viz-vs .vs-bad { background: #fef2f2; border-left: 4px solid #b91c1c; }
+.viz-vs .vs-good { background: #f0fdf4; border-left: 4px solid #15803d; }
+.viz-vs .vs-quote-zh,
+.viz-vs .vs-quote-en {
+  font-size: 16px;
+  line-height: 1.45;
+}
+.viz-vs .vs-quote-zh { font-weight: 600; color: var(--text); }
+.viz-vs .vs-quote-en { color: var(--text-soft, #4b3b41); font-size: 14px; }
+@media (max-width: 768px) {
+  .viz-vs { grid-template-columns: 1fr; }
+}
+
 /* ─── Reduced Motion ────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .slide.active { animation: none; }

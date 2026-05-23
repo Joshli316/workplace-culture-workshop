@@ -27,6 +27,7 @@ cp "$ROOT/sw.js"            "$DIST/"
 
 # Static assets + CF Pages config
 cp "$ROOT/og.png"           "$DIST/"
+cp "$ROOT/apple-touch-icon.png" "$DIST/"
 cp "$ROOT/robots.txt"       "$DIST/"
 cp "$ROOT/sitemap.xml"      "$DIST/"
 cp "$ROOT/_headers"         "$DIST/"

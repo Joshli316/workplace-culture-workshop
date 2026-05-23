@@ -26,7 +26,7 @@
   function toggleLang() {
     const isZh = document.body.classList.toggle('zh');
     try { localStorage.setItem('wcw_lang', isZh ? 'zh' : 'en'); } catch (e) {}
-    document.documentElement.lang = isZh ? 'zh-Hans' : 'en';
+    document.documentElement.lang = isZh ? 'zh-CN' : 'en';
     document.getElementById('langToggle').textContent = isZh ? '中文' : 'EN';
   }
 
@@ -35,7 +35,7 @@
     try { saved = localStorage.getItem('wcw_lang'); } catch (e) {}
     const isZh = saved !== 'en';
     document.body.classList.toggle('zh', isZh);
-    document.documentElement.lang = isZh ? 'zh-Hans' : 'en';
+    document.documentElement.lang = isZh ? 'zh-CN' : 'en';
     document.getElementById('langToggle').textContent = isZh ? '中文' : 'EN';
   })();
 
