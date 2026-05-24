@@ -1,4 +1,4 @@
-const CACHE = 'workplace-culture-workshop-v6';
+const CACHE = 'workplace-culture-workshop-v7';
 const ASSETS = [
   '/',
   '/index.html',

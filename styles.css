@@ -1201,3 +1201,32 @@ a:focus-visible {
     animation-duration: 0.01ms !important;
   }
 }
+
+
+/* ── Hub back-chip (link to csc-workshops.pages.dev parent hub) ── */
+.hub-back-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 11px 4px 9px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 150ms ease, color 150ms ease, transform 150ms ease;
+}
+.hub-back-chip:hover {
+  background: rgba(255, 255, 255, 0.22);
+  color: white;
+  transform: translateX(-2px);
+}
+.hub-back-chip:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+.hub-back-chip svg { flex-shrink: 0; opacity: 0.9; }
