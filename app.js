@@ -175,3 +175,9 @@
 
   showSlide(1);
 })();
+
+/* print-slides-handout: capture phase so it beats deck nav/advance handlers */
+document.addEventListener('click', function (e) {
+  var t = e.target && e.target.closest && e.target.closest('[data-action="print"]');
+  if (t) { e.stopPropagation(); e.preventDefault(); window.print(); }
+}, true);

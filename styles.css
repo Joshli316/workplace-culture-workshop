@@ -1230,3 +1230,31 @@ a:focus-visible {
   outline-offset: 2px;
 }
 .hub-back-chip svg { flex-shrink: 0; opacity: 0.9; }
+
+/* ===== PRINT: slide handout (one slide per page) ===== */
+@page { size: landscape; margin: 12mm; }
+
+@media print {
+  html, body { height: auto !important; overflow: visible !important;
+               background: #fff !important; color: #000 !important; }
+  .slides-area, #slidesArea { position: static !important; overflow: visible !important; }
+  .slide {
+    display: block !important; position: static !important; inset: auto !important;
+    height: auto !important; min-height: auto !important; overflow: visible !important;
+    page-break-after: always; break-after: page; cursor: default;
+    zoom: 0.7;
+  }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .slide, .slide * { animation: none !important; }
+  /* hide interactive chrome (nav, toggles, reveal + print buttons, hub link) */
+  .slide-header, .slide-footer, .lang-toggle, .skip-to-main, .key-hint,
+  .nav-btn, .progress-track, .progress-label, .progress-dots, .progress-fill,
+  .hub-back-chip, .start-hint, [data-action], nav { display: none !important; }
+  /* keep small blocks intact across page breaks */
+  .answer-block, .activity-answer, .activity-answer-box, .note-block,
+  [class*="card"], [class*="-box"], [class*="callout"] { break-inside: avoid; page-break-inside: avoid; }
+  /* force-reveal gated answers so the handout is complete */
+  .answer-block, .answer, .activity-answer, .activity-answer-box,
+  .blank-answer, .paycheck-hidden, .option-match,
+  .q1-answer, .q2-answer, .q3-answer, .q2-block, .q3-block { display: block !important; }
+}
