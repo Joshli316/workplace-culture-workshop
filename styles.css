@@ -903,6 +903,23 @@ a:focus-visible {
   .slide { display: block !important; position: static !important; page-break-after: always; }
 }
 
+/* ─── Self-Check Tool Callout ───────────────────────────── */
+.tool-callout {
+  display: flex; align-items: center; gap: 16px;
+  margin: 0 0 30px; padding: 18px 20px;
+  background: var(--accent-light); border: 1px solid var(--accent);
+  border-left: 5px solid var(--accent); border-radius: var(--radius-card);
+  text-decoration: none; color: var(--text);
+  transition: box-shadow .15s ease, transform .15s ease;
+}
+.tool-callout:hover { box-shadow: 0 4px 14px rgba(0,0,0,.08); transform: translateY(-1px); }
+.tool-callout-icon { flex: none; width: 46px; height: 46px; display: grid; place-items: center; background: var(--accent); color: #fff; border-radius: 10px; }
+.tool-callout-text { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.tool-callout-title { font-weight: 700; font-size: 18px; line-height: 1.35; color: var(--primary-dark); }
+.tool-callout-sub { font-size: 16px; line-height: 1.5; color: var(--text-sub); }
+.tool-callout-arrow { flex: none; font-size: 22px; color: var(--primary-dark); }
+@media (max-width: 560px) { .tool-callout { flex-direction: column; align-items: flex-start; } .tool-callout-arrow { align-self: flex-end; } }
+
 /* ─── Resources Page ────────────────────────────────────── */
 .resources-body {
   overflow: visible;
